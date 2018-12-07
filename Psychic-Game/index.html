@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Game</title>
+</head>   
+
+<body>
+    <h1>Psychich Game</h1>
+    <p class="guessNumber">Guess Number Between 1-10</p>
+    <p class="wins" >Wins: 0 </p>
+    <p class="losses" >Losses: 0 </p>
+    <p class="guessesLeft" >Guesses Left: 0 </p>
+    <p class="yourGuessessoFar" >Your Guesses so far: </p>
+<script>
+
+
+var answer = 3;
+
+    
+    var guesses = 10;
+document.addEventListener("keydown", function(event){
+    var num = event.key;
+    console.log(event.key);
+
+    if(num === String(answer)){
+        alert("You Won");
+    }else if(num !== answer && guesses>0){
+        guesses-=1;
+       
+        document.querySelector(".guessesLeft").innerHTML =
+           "Guesses Left: " + guesses;
+          
+        document.querySelector(".yourGuessessoFar").innerHTML =
+           "Your Guesses so far: " + guesses;
+
+        // document.querySelector(".wins").innerHTML=.innerHTML = 
+        //    "wins:" - guesses;
+    
+    }else{
+        alert("Game Over")
+    }
+    
+})
+</script>
+
+
+
+</body>
+</html>
