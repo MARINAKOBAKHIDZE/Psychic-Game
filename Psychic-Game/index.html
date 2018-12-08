@@ -34,8 +34,8 @@ document.addEventListener("keydown", function(event){
         document.querySelector(".yourGuessessoFar").innerHTML =
            "Your Guesses so far: " + guesses;
 
-        // document.querySelector(".wins").innerHTML=.innerHTML = 
-        //    "wins:" - guesses;
+        document.querySelector(".wins").innerHTML = "Final Wins: " + guesses + 1; 
+        document.querySelector("losses").innerHTML = "Final Losses " + guesses -1;
     
     }else{
         alert("Game Over")
